@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Incident"
+        android:id="@+id/button"
+        android:onClick="onReport"
+        android:textColor="#FFFFFF"
+        android:background="#FF0000" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:background="#000000"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onEvents"
+            android:text="CU Events"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:layout_weight="0.38" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Traffic"
+            android:id="@+id/traffic"
+            android:onClick="onTraffic"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:layout_weight="0.23" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crime"
+            android:id="@+id/crime"
+            android:onClick="onCrime"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:layout_weight="0.12" />
+
+        <Button
+            android:id="@+id/disaster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDisasters"
+            android:text="Disasters"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="#000000" />
+
+    </LinearLayout>
+
+
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="52dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:padding="100dp"
+        android:paddingBottom="100dp"
+        android:paddingEnd="100dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:paddingStart="100dp"
+        android:paddingTop="100dp"
+        android:src="@drawable/ic_pencil_circle"
+        app:elevation="24dp" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>
